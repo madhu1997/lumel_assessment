@@ -11,5 +11,5 @@ Run below command to start
 2. make migrationup
 3. make server
 
-Please refer import postman collection to your postman tool.
-file_name: LumelSaleData.postman_collection.json
+Please import postman collection to your postman tool.
+FILE_NAME: LumelSaleData.postman_collection.json
