@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "e6f6f707-2dcf-4da3-be9d-07ec8d0734f6",
+		"name": "Lumel Sale Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6800908"
+	},
+	"item": [
+		{
+			"name": "get_total_revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/revenue_calculations?start_date=2023-01-01&end_date=2024-07-29&filter_type=by_product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"revenue_calculations"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2023-01-01",
+							"description": "dateformat: \"YYYY-MM-DD\""
+						},
+						{
+							"key": "end_date",
+							"value": "2024-07-29",
+							"description": "dateformat: \"YYYY-MM-DD\""
+						},
+						{
+							"key": "filter_type",
+							"value": "by_product",
+							"description": "filter_type: [\"by_product\", \"by_category\", \"by_region\"]"
+						}
+					]
+				},
+				"description": "Revenue calculation based on filter_type"
+			},
+			"response": [
+				{
+					"name": "ByProduct",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/revenue_calculations?start_date=2023-01-01&end_date=2024-07-29&filter_type=by_product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"revenue_calculations"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01",
+									"description": "dateformat: \"YYYY-MM-DD\""
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-29",
+									"description": "dateformat: \"YYYY-MM-DD\""
+								},
+								{
+									"key": "filter_type",
+									"value": "by_product",
+									"description": "filter_type: [\"by_product\", \"by_category\", \"by_region\"]"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 03:16:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "288"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": [\n        {\n            \"ProductName\": \"iPhone 15 Pro\",\n            \"Revenue\": 3896.95\n        },\n        {\n            \"ProductName\": \"Levi's 501 Jeans\",\n            \"Revenue\": 179.77\n        },\n        {\n            \"ProductName\": \"Sony WH-1000XM5 Headphones\",\n            \"Revenue\": 349.84000000000003\n        },\n        {\n            \"ProductName\": \"UltraBoost Running Shoes\",\n            \"Revenue\": 539.9\n        },\n        {\n            \"ProductName\": \"Wire\",\n            \"Revenue\": 2597.95\n        }\n    ]\n}"
+				},
+				{
+					"name": "ByRegion",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/revenue_calculations?start_date=2023-01-01&end_date=2024-07-29&filter_type=by_region",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"revenue_calculations"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-29"
+								},
+								{
+									"key": "filter_type",
+									"value": "by_region"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 03:21:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": [\n        {\n            \"RegionName\": \"Asia\",\n            \"Revenue\": 5375.67\n        },\n        {\n            \"RegionName\": \"Europe\",\n            \"Revenue\": 1299\n        },\n        {\n            \"RegionName\": \"North America\",\n            \"Revenue\": 709.74\n        },\n        {\n            \"RegionName\": \"South America\",\n            \"Revenue\": 180\n        }\n    ]\n}"
+				},
+				{
+					"name": "ByCategory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/revenue_calculations?start_date=2023-01-01&end_date=2024-07-29&filter_type=by_category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"revenue_calculations"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-29"
+								},
+								{
+									"key": "filter_type",
+									"value": "by_category"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 03:22:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": [\n        {\n            \"Category\": \"Clothing\",\n            \"Revenue\": 179.77\n        },\n        {\n            \"Category\": \"Electrical\",\n            \"Revenue\": 2597.95\n        },\n        {\n            \"Category\": \"Electronics\",\n            \"Revenue\": 4246.79\n        },\n        {\n            \"Category\": \"Shoes\",\n            \"Revenue\": 539.9\n        }\n    ]\n}"
+				},
+				{
+					"name": "TotalRevenue",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/revenue_calculations?start_date=2023-01-01&end_date=2024-07-29&filter_type=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"revenue_calculations"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-29"
+								},
+								{
+									"key": "filter_type",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 03:22:37 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"Revenue\": 7564.41\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/refresh_data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"refresh_data"
+					]
+				},
+				"description": "Just refreshing or appending data based on the csv file"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/refresh_data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"refresh_data"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 02:39:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data refresh triggered\"\n}"
+				}
+			]
+		}
+	]
+}

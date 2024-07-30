@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS order_details;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS regions;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS products;
