@@ -6,6 +6,9 @@ Install below things;
 2. Postgres
 3. Golang-migrate dependencies
 
+Please find the DB design in this file
+FILE_NAME: lumel_sales_data_db_design.pdf
+
 Run below command to start
 1. make createdb
 2. make migrationup
